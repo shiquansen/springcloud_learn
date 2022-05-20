@@ -18,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * 3. dataId 的拼接格式变成 ${prefix}.${file-extension}
  * file-exetension 为配置内容的数据格式，可以通过配置项 spring.cloud.nacos.config.file-extension 来配置。目前只支持 properties 和 yaml 类型。
+ * @author V00000033
  */
 @RestController
 @RequestMapping("/config")
 @RefreshScope
 public class NacosConfigController {
 
-    @Value("${useLocalCache:false}")
+    @Value("${useLocalCache}")
     private boolean useLocalCache;
 
     @RequestMapping("/get")

@@ -1,0 +1,10 @@
+# Initializers
+#org.springframework.context.ApplicationContextInitializer=\
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.example.demo.env.MyEnvPP
+
+org.springframework.boot.env.PropertySourceLoader=\
+com.example.demo.env.EnvLocate
+
+

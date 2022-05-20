@@ -1,0 +1,6 @@
+home:
+  abc: 123
+  bcd: 234
+spring:
+  profiles:
+    include: test

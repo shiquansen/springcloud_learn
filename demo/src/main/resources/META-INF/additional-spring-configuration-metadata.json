@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "home.abc",
+      "type": "java.lang.String",
+      "description": "Description for home.abc."
+  }
+] }
