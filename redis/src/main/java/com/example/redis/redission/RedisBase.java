@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 public class RedisBase {
 
     @Autowired
-    RedissonConnectionFactory redissonConnectionFactory;
-
-    @Autowired
     RedissonClient redissonClient;
 
     public void setKey(String key, String value){

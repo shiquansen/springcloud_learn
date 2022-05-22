@@ -68,7 +68,7 @@
                     <archive>
                         <manifest>
                             <!--指定入口文件的位置-->
-                            <mainClass>com.example.feign.ConsumerApplication</mainClass>
+                            <mainClass>com.example.nacos.ConsumerApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
