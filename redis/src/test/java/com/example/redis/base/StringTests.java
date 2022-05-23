@@ -26,7 +26,7 @@ class StringTests {
 
     @Test
     void contextLoads1() {
-        redisBase.setKey("manjun", "123");
+
     }
 
     @Test
