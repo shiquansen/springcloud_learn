@@ -21,11 +21,15 @@
         <spring-cloud.version>2.2.7.RELEASE</spring-cloud.version>
         <lombok.version>1.18.22</lombok.version>
         <nacos.version>2.2.7.RELEASE</nacos.version>
+        <sentinel.version>2.2.7.RELEASE</sentinel.version>
+        <rocketmq.version>4.4.0</rocketmq.version>
+        <redisson.version>3.13.6</redisson.version>
+        <elasticsearch.version>7.6.2</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-<!--     spring-boot-       -->
+            <!--     spring-boot-       -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
@@ -72,12 +76,41 @@
                 <version>${nacos.version}</version>
             </dependency>
 
-<!--        util        -->
+            <!--        util        -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <optional>true</optional>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <!--    rocketmq        -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+
+            <!--     redisson      -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${sentinel.version}</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-high-level-client -->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
             </dependency>
 
         </dependencies>
