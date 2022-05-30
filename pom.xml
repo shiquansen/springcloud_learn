@@ -24,7 +24,9 @@
         <sentinel.version>2.2.7.RELEASE</sentinel.version>
         <rocketmq.version>4.4.0</rocketmq.version>
         <redisson.version>3.13.6</redisson.version>
-        <elasticsearch.version>7.6.2</elasticsearch.version>
+        <elasticsearch.version>6.4.3</elasticsearch.version>
+        <hutool.version>5.7.22</hutool.version>
+        <fastjson.version>1.2.80</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -112,6 +114,22 @@
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
