@@ -27,6 +27,10 @@
         <elasticsearch.version>6.4.3</elasticsearch.version>
         <hutool.version>5.7.22</hutool.version>
         <fastjson.version>1.2.80</fastjson.version>
+        <mysql.version>8.0.25</mysql.version>
+        <shardingjdbc.version>5.0.0</shardingjdbc.version>
+        <mybatisplus.version>3.3.2</mybatisplus.version>
+        <druid.version>1.1.22</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -130,6 +134,31 @@
                 <scope>compile</scope>
             </dependency>
 
+
+            <!-- datasource-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-sharding-spring-boot-starter</artifactId>
+                <version>${shardingjdbc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
