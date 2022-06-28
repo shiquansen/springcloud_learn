@@ -10,9 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>nacos</module>
-        <module>producer</module>
-        <module>consumer</module>
+        <module>base</module>
+        <module>springboot</module>
     </modules>
 
     <properties>
@@ -28,9 +27,11 @@
         <hutool.version>5.7.22</hutool.version>
         <fastjson.version>1.2.80</fastjson.version>
         <mysql.version>8.0.25</mysql.version>
-        <shardingjdbc.version>5.0.0</shardingjdbc.version>
-        <mybatisplus.version>3.3.2</mybatisplus.version>
+        <sharding-sphere.version>4.1.1</sharding-sphere.version>
+        <!--  3.3.1之前的版本，不然会报错      -->
+        <mybatisplus.version>3.3.1</mybatisplus.version>
         <druid.version>1.1.22</druid.version>
+        <hutool.version>5.3.5</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +56,17 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-mail</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -148,16 +160,33 @@
                 <version>${mysql.version}</version>
             </dependency>
 
+            <!-- for spring boot -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
-                <artifactId>shardingsphere-sharding-spring-boot-starter</artifactId>
-                <version>${shardingjdbc.version}</version>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding-sphere.version}</version>
             </dependency>
+
+            <!-- for spring namespace -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-namespace</artifactId>
+                <version>${sharding-sphere.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisplus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
         </dependencies>

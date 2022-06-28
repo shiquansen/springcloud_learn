@@ -1,3 +1,0 @@
-spring
-rxjava
-guava
